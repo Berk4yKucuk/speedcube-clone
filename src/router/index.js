@@ -1,0 +1,37 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import ProductCardView from '../views/ProductCardView.vue'
+import Home from '../views/Home.vue'
+
+const routes = [
+  //ana menü
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  
+  //product card komponenti
+  {
+    path: '/sayfa/1',
+    name: 'Sayfa1',
+    component: ProductCardView 
+  },
+  
+  //idle sayfalar
+  { path: '/sayfa/2', name: 'Sayfa2', component: { template: '<h2>Sayfa 2 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/3', name: 'Sayfa3', component: { template: '<h2>Sayfa 3 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/4', name: 'Sayfa4', component: { template: '<h2>Sayfa 4 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/5', name: 'Sayfa5', component: { template: '<h2>Sayfa 5 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/6', name: 'Sayfa6', component: { template: '<h2>Sayfa 6 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/7', name: 'Sayfa7', component: { template: '<h2>Sayfa 7 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/8', name: 'Sayfa8', component: { template: '<h2>Sayfa 8 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/9', name: 'Sayfa9', component: { template: '<h2>Sayfa 9 İçeriği Burada Olacak</h2>' } },
+  { path: '/sayfa/10', name: 'Sayfa10', component: { template: '<h2>Sayfa 10 İçeriği Burada Olacak</h2>' } },
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+export default router

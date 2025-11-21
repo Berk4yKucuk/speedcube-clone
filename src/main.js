@@ -1,6 +1,9 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router' // Yeni oluşturduğumuz router dosyasını içe aktar
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(router) // Router'ı uygulamaya dahil et
+
+app.mount('#app')
