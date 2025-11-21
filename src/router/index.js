@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ProductCardView from '../views/ProductCardView.vue'
+import NavbarView from '../views/NavbarView.vue'
 import Home from '../views/Home.vue'
+
 
 const routes = [
   //ana menü
@@ -17,8 +19,14 @@ const routes = [
     component: ProductCardView 
   },
   
+  {
+    path: '/sayfa/2',
+    name: 'Sayfa2',
+    component: NavbarView 
+  },
+
+  
   //idle sayfalar
-  { path: '/sayfa/2', name: 'Sayfa2', component: { template: '<h2>Sayfa 2 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/3', name: 'Sayfa3', component: { template: '<h2>Sayfa 3 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/4', name: 'Sayfa4', component: { template: '<h2>Sayfa 4 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/5', name: 'Sayfa5', component: { template: '<h2>Sayfa 5 İçeriği Burada Olacak</h2>' } },
