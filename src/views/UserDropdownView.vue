@@ -8,7 +8,7 @@ import UserDropdown from '../components/UserDropdown.vue'
     <router-link to="/">Ana Menü</router-link>
     
     <div class="fake-navbar">
-      <span class="brand">dummy header</span>
+      <span class="brand">dummy navbar</span>
       <UserDropdown />
     </div>
 
@@ -24,7 +24,6 @@ import UserDropdown from '../components/UserDropdown.vue'
 }
 .top-nav a { text-decoration: none; color: #333; font-weight: bold; }
 
-/* Temsili Navbar */
 .fake-navbar {
   display: flex;
   justify-content: space-between;
