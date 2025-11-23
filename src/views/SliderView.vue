@@ -6,9 +6,9 @@ import ProductSlider from '../components/ProductSlider.vue'
   <div class="back-link">
     <router-link to="/">Ana Menü</router-link>
   </div>
+
   <div class="slider-view">
     <ProductSlider />
-
   </div>
 </template>
 

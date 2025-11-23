@@ -6,6 +6,7 @@ import LoginView from '../views/LoginView.vue'
 import ShoppingCartView from '../views/ShoppingCartView.vue'
 import ProductPageView from '../views/ProductPageView.vue'
 import SliderView from '../views/SliderView.vue'
+import CarouselView from '../views/CarouselView.vue'
 import Home from '../views/Home.vue'
 
 
@@ -54,8 +55,12 @@ const routes = [
   name: 'Sayfa7',
   component: SliderView
   },
+  {
+    path: '/sayfa/8',
+    name: 'Sayfa8',
+    component: CarouselView
+  },
   //idle sayfalar
-  { path: '/sayfa/8', name: 'Sayfa8', component: { template: '<h2>Sayfa 8 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/9', name: 'Sayfa9', component: { template: '<h2>Sayfa 9 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/10', name: 'Sayfa10', component: { template: '<h2>Sayfa 10 İçeriği Burada Olacak</h2>' } },
 ]
