@@ -48,6 +48,22 @@ function adetAzalt(urun) {
   if (urun.adet > 1) urun.adet--
 }
 
+// --- BURAYI EKLE ---
+// Progress Bar Yüzdesi (Max 100'de sabitlenir)
+const dolulukYuzdesi = computed(() => {
+  const mevcut = parseFloat(toplamFiyat.value)
+  const hedef = 200
+  let yuzde = (mevcut / hedef) * 100
+  return yuzde > 100 ? 100 : yuzde
+})
+
+// Kalan Tutar Hesabı
+const kalanTutar = computed(() => {
+  const kalan = 200 - parseFloat(toplamFiyat.value)
+  return kalan > 0 ? kalan.toFixed(2) : 0
+})
+// -------------------
+
 </script>
 
 
@@ -60,7 +76,20 @@ function adetAzalt(urun) {
       <span class="close-btn">x</span>
     </div>
     <div class="item-count">{{ toplamAdet }} items</div>
-
+    
+    
+    <div class="shipping-progress">
+      <div class="progress-bg">
+        <div class="progress-fill" :style="{ width: dolulukYuzdesi + '%' }"></div>
+      </div>
+      
+      <p v-if="dolulukYuzdesi < 100" class="shipping-msg">
+        Only <span class="red">$ {{ kalanTutar }}</span> away from FREE Shipping
+      </p>
+      <p v-else class="shipping-msg success">
+        🎉 You got FREE Shipping!
+      </p>
+    </div>
     
     <div class="cart-items">
       <div v-for="urun in sepetUrunleri" :key="urun.id" class="cart-item">
@@ -83,6 +112,8 @@ function adetAzalt(urun) {
         <div class="remove-btn" >×</div>
       </div>
     </div>
+
+
 
     <div class="cart-footer">
       <span class="total-label">Total</span>
@@ -133,6 +164,34 @@ function adetAzalt(urun) {
 .item-details h3 { font-size: 0.95rem; margin: 0 0 5px 0; color: #333; }
 .price { font-weight: bold; margin: 0 0 10px 0; }
 
+.shipping-progress {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.progress-bg {
+  width: 100%;
+  height: 10px;
+  background-color: #333; 
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff9800; /* Turuncu Doluluk */
+  transition: width 0.4s ease-out; /* Yumuşak geçiş */
+}
+
+.shipping-msg {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.red { color: #d32f2f; font-weight: bold; }
+.success { color: #2e7d32; font-weight: bold; }
 
 .quantity-box {
   display: inline-flex;
