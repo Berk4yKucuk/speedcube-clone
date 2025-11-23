@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router' // Yeni oluşturduğumuz router dosyasını içe aktar
+import router from './router' 
 
 const app = createApp(App)
 
-app.use(router) // Router'ı uygulamaya dahil et
+app.use(router) //routerı ekle
 
 app.mount('#app')

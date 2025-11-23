@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ProductCardView from '../views/ProductCardView.vue'
 import NavbarView from '../views/NavbarView.vue'
+import FooterView from '../views/FooterView.vue'
 import Home from '../views/Home.vue'
 
 
@@ -25,9 +26,12 @@ const routes = [
     component: NavbarView 
   },
 
-  
+  {
+    path: '/sayfa/3',
+    name: 'Sayfa3',
+    component: FooterView
+  },
   //idle sayfalar
-  { path: '/sayfa/3', name: 'Sayfa3', component: { template: '<h2>Sayfa 3 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/4', name: 'Sayfa4', component: { template: '<h2>Sayfa 4 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/5', name: 'Sayfa5', component: { template: '<h2>Sayfa 5 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/6', name: 'Sayfa6', component: { template: '<h2>Sayfa 6 İçeriği Burada Olacak</h2>' } },

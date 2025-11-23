@@ -110,7 +110,7 @@ const menuOgeleri = ref([
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px; 
+  gap: 30px; 
   font-size: 0.9rem;
   font-weight: 600;
   height: 50px; 
