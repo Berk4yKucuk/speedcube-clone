@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ProductCardView from '../views/ProductCardView.vue'
 import NavbarView from '../views/NavbarView.vue'
 import FooterView from '../views/FooterView.vue'
+import LoginView from '../views/LoginView.vue'
 import Home from '../views/Home.vue'
 
 
@@ -13,7 +14,6 @@ const routes = [
     component: Home
   },
   
-  //product card komponenti
   {
     path: '/sayfa/1',
     name: 'Sayfa1',
@@ -31,8 +31,12 @@ const routes = [
     name: 'Sayfa3',
     component: FooterView
   },
+  {
+  path: '/sayfa/4',
+  name: 'Sayfa4',
+  component: LoginView
+  },
   //idle sayfalar
-  { path: '/sayfa/4', name: 'Sayfa4', component: { template: '<h2>Sayfa 4 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/5', name: 'Sayfa5', component: { template: '<h2>Sayfa 5 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/6', name: 'Sayfa6', component: { template: '<h2>Sayfa 6 İçeriği Burada Olacak</h2>' } },
   { path: '/sayfa/7', name: 'Sayfa7', component: { template: '<h2>Sayfa 7 İçeriği Burada Olacak</h2>' } },
